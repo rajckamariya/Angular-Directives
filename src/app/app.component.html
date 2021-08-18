@@ -1,0 +1,5 @@
+<button (click)="onDisplayToggle()">Display Details</button>
+<p *ngIf=showSecret>Secret Password = 123</p>
+<div *ngFor="let logItem of log;let i = index" [ngStyle]="{ backgroundColor:i%2 == 0? 'red' : 'green' }"
+  [ngClass]="{'online':i%2!=0}">
+  {{logItem}}</div>
